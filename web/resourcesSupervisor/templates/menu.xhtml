@@ -1,0 +1,18 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:form>
+        <ul>
+            <h2>Geral</h2>
+            <li><h:commandLink value="Home" action="/paginas/principal/principal.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Sair" action="#{loginBean.registraSaida()}"/></li>
+            <h2>Funções</h2>
+            <li><h:commandLink value="Validar Aluno" action="/paginas/telasuper/template/template/aluno/ialuno.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Alterar Aluno" action="/paginas/aluno/aaluno.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Exibir Alunos" action="/paginas/aluno/ealuno.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Cadastrar Vagas" action="/paginas/vaga/ivaga.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Alterar Vaga" action="/paginas/vaga/avaga.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Exibir Vagas" action="/paginas/vaga/evaga.xhtml?faces-redirect=true"/></li>           
+        </ul>    
+    </h:form>        
+</ui:composition>

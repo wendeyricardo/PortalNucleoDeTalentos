@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />       
+        <h:outputStylesheet name="./css/default.css"/>
+        <title>Portal do nucleo de talentos</title>
+    </h:head>
+    <h:body>
+        <div id="paginaLogin">
+            <h2>Login</h2>
+            <h:form>
+                <h:panelGrid columns="1">
+                    <h:inputText id="login" value="#{loginBean.fLogin}" pt:placeholder="Matricula"/>
+                    <br/>
+                    <h:inputSecret id="senha" value="#{loginBean.fSenha}" pt:placeholder="Senha"/>
+                  
+                </h:panelGrid>
+                <h:panelGrid columns="2">
+                    <h:commandButton value="Entrar" action="#{loginBean.validarUsuario()}" styleClass="botaoLogin"/>
+                    <h:commandButton value="Recuperar Senha" action="#{loginBean.validarUsuario()}" styleClass="botaoRecuperar"/>
+                </h:panelGrid>
+                <h:panelGrid columns="1">
+                    <h:commandButton value="Efetuar pré-cadastro" action="#{alunoBean.adicionarAluno()}" styleClass="botao"/>
+                </h:panelGrid>
+            </h:form>
+            <h:messages/>
+        </div>
+    </h:body>
+</html>

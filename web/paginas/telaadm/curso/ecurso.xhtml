@@ -1,0 +1,62 @@
+<ui:composition xmlns ="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"                
+                template="./../../resourcesAdministrador/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <table class="titulo">
+                <tr>
+                    <td width="95%">Cursos</td>
+                    <td width="5%">
+                        <h:commandLink action="#{cursoBean.prepararAdicionarCurso()}">
+                            <h:graphicImage value="/resources/images/add.png"/>
+                        </h:commandLink>
+                    </td>
+                </tr>
+            </table>
+            <h:dataTable value="#{cursoBean.listaCurso}" var="item" styleClass="tabela" headerClass="cabecalho">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome"/>
+                    </f:facet>
+                    <h:outputText value="#{item.nome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="cidade"/>
+                    </f:facet>
+                    <h:outputText value="#{item.cidade}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="graduacao"/>
+                    </f:facet>
+                    <h:outputText value="#{item.graduacao}"/>
+                </h:column>                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="unidade"/>
+                    </f:facet>
+                    <h:outputText value="#{item.unidade}"/>
+                </h:column>                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Alterar"/>
+                    </f:facet>
+                    <h:commandLink action="#{cursoBean.prepararAlterarCurso()}">
+                        <h:graphicImage value="/resources/images/edt.png" alt="Alterar" />
+                    </h:commandLink>    
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Excluir"/>
+                    </f:facet>
+                    <h:commandLink action="#{cursoBean.excluirCurso()}">
+                        <h:graphicImage value="/resources/images/del.png" alt="Alterar" />
+                    </h:commandLink>
+                </h:column>                 
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

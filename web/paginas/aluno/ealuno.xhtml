@@ -1,0 +1,79 @@
+<ui:composition xmlns ="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"                
+                template="./../../resources/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <table class="titulo">
+                <tr>
+                    <td width="95%">alunos</td>
+                    <td width="5%">
+
+                    </td>
+                </tr>
+            </table>
+            <h:dataTable value="#{alunoBean.listaAlunos}" var="item" styleClass="tabela" headerClass="cabecalho">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome"/>
+                    </f:facet>
+                    <h:outputText value="#{item.nome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="matricula"/>
+                    </f:facet>
+                    <h:outputText value="#{item.matricula}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="email"/>
+                    </f:facet>
+                    <h:outputText value="#{item.email}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="sexo"/>
+                    </f:facet>
+                    <h:outputText value="#{item.sexo}"/>
+                </h:column>                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="endereco"/>
+                    </f:facet>
+                    <h:outputText value="#{item.endereco}"/>
+                </h:column>  
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="nascimento"/>
+                    </f:facet>
+                    <h:outputText value="#{item.nascimento}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="naturalidade"/>
+                    </f:facet>
+                    <h:outputText value="#{item.naturalidade}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="cpf"/>
+                    </f:facet>
+                    <h:outputText value="#{item.cpf}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="rg"/>
+                    </f:facet>
+                    <h:outputText value="#{item.rg}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Alterar"/>
+                    </f:facet>
+                </h:column>                 
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

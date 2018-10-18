@@ -1,0 +1,53 @@
+<ui:composition xmlns ="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"                
+                template="./../../resources/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form>            
+            <fieldset>
+                <legend>adicionar vagas</legend>
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="nome" for="nome"/>
+                    <h:inputText id="nome" value="#{vagaBean.vaga.nome}" size="100" required="true" requiredMessage="Nome é obrigatório"/>
+                    <h:message for="nome" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="Descricao:" for="descricao"/>
+                    <h:inputText id="Descricao" value="#{vagaBean.vaga.descricao}" size="100" required="true" requiredMessage="Descrição é obrigatório"/>
+                    <h:message for="Descricao" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="Beneficios:" for="beneficios"/>
+                    <h:inputText id="beneficios" value="#{vagaBean.vaga.beneficios}" size="50" required="true" requiredMessage="beneficios é obrigatório"/>
+                    <h:message for="beneficios" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="cidade:" for="cidade"/>
+                    <h:inputText id="cidade" value="#{vagaBean.vaga.cidade}" size="50" required="true" requiredMessage="cidade é obrigatório"/>
+                    <h:message for="cidade" errorStyle="color:red; display:block"/>  
+                    <h:outputLabel value="numero vagas" for="numero_vagas"/>
+                    <h:inputText id="numero_vagas" value="#{vagaBean.vaga.numero_de_vagas}" size="100" required="true" requiredMessage="numero de vagas é obrigatório"/>
+                    <h:message for="numero_vagas" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="carga horaria" for="carga_horaria"/>
+                    <h:inputText id="carga_horaria" value="#{vagaBean.vaga.carga_horaria}" size="100" required="true" requiredMessage="carga horaria é obrigatório"/>
+                    <h:message for="carga_horaria" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="horario" for="horario"/>
+                    <h:inputText id="horario" value="#{vagaBean.vaga.horario}" size="100" required="true" requiredMessage="horario é obrigatório"/>
+                    <h:message for="horario" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="data" for="data"/>
+                    <h:inputText id="data" value="#{vagaBean.vaga.data_de_vigencia}" size="100" required="true" requiredMessage="horario é obrigatório"/>
+                    <h:message for="data_de_vigencia" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="curso" for="curso"/> 
+                    <h:selectOneMenu id="curso" value="#{cursoVagaBean.id_curso}">
+                        <f:selectItems value="#{cursoVagaBean.listaCurso}" var="curso" itemValue="#{curso.id_curso}" itemLabel="#{curso.nome}"/>   
+                    </h:selectOneMenu>
+                    <h:message for="curso" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="supervisor" for="supervisor"/>
+                    <h:selectOneMenu id="supervisor" value="#{vagaBean.idsupervisor}">
+                        <f:selectItems value="#{vagaBean.listaSupervisor}" var="supervisor" itemValue="#{supervisor.id_supervisor}" itemLabel="#{supervisor.nome}"/>   
+                    </h:selectOneMenu>
+                    <h:message for="supervisor" errorStyle="color:red; display:block"/>
+                </h:panelGrid>
+            </fieldset>    
+            <h:panelGroup>
+                <h:commandButton value="Salvar" action="#{vagaBean.adicionarVaga()}" styleClass="botao"/>
+                <h:commandButton value="Cancelar" type="reset" styleClass="botao"/>
+            </h:panelGroup>
+        </h:form>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,31 @@
+<ui:composition xmlns ="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"                
+                template="./../../resources/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form>            
+            <fieldset>
+                <legend>Alteração de Curso</legend>
+                <h:panelGrid columns="3">
+                    <h:outputLabel value="Nome" for="nome"/>
+                    <h:inputText id="nome" value="#{cursoBean.curso.nome}" size="100" required="true" requiredMessage="Nome é obrigatório"/>
+                    <h:message for="nome" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="Cidade:" for="cidade"/>
+                    <h:inputText id="cidade" value="#{cursoBean.curso.cidade}" size="100" required="true" requiredMessage="cidade é obrigatório"/>
+                    <h:message for="cidade" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="Graduação:" for="graduacao"/>
+                    <h:inputText id="graduacao" value="#{cursoBean.curso.graduacao}" size="50" required="true" requiredMessage="graduacao é obrigatório"/>
+                    <h:message for="graduacao" errorStyle="color:red; display:block"/>
+                    <h:outputLabel value="Unidade:" for="unidade"/>
+                    <h:inputText id="unidade" value="#{cursoBean.curso.unidade}" size="50" required="true" requiredMessage="unidade é obrigatório"/>
+                    <h:message for="unidade" errorStyle="color:red; display:block"/>                    
+                </h:panelGrid>
+            </fieldset>    
+            <h:panelGroup>
+                <h:commandButton value="Salvar" action="#{cursoBean.alterarCurso()}" styleClass="botao"/>
+                <h:commandButton value="Cancelar" type="reset" styleClass="botao"/>
+            </h:panelGroup>
+        </h:form>
+    </ui:define>
+</ui:composition>

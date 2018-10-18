@@ -1,0 +1,22 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:form>
+        <ul>
+            <h2>Geral</h2>
+            <li><h:commandLink value="Home" action="/paginas/principal/principal.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Sair" action="#{loginBean.registraSaida()}"/></li>
+            <h2>Funções</h2>
+            <li><h:commandLink value="Cadastrar Administrador" action="/paginas/administrador/iadministrador.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Alterar Administrador" action="/paginas/administrador/aadministrador.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Exibir Administradores" action="/paginas/administrador/eadministrador.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Cadastrar Supervisor" action="/paginas/supervisor/isupervisor.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Alterar Supervisor" action="/paginas/supervisor/asupervisor.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Exibir Supervisores" action="/paginas/supervisor/esupervisor.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Cadastrar Curso" action="/paginas/curso/icurso.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Alterar Curso" action="/paginas/curso/acurso.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Exbir Cursos" action="/paginas/curso/ecurso.xhtml?faces-redirect=true"/></li>
+            <li><h:commandLink value="Emitir Relatório" action="/paginas/curso/ecurso.xhtml?faces-redirect=true"/></li>
+        </ul>    
+    </h:form>        
+</ui:composition>

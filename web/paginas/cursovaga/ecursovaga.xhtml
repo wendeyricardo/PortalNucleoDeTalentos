@@ -1,0 +1,50 @@
+<ui:composition xmlns ="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"                
+                template="./../../resources/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form id="page">
+            <table class="titulo">
+                <tr>
+                    <td width="95%">Cursos</td>
+                    <td width="5%">
+                        <h:commandLink action="#{cursoVagaBean.prepararAdicionarCursoVaga()}">
+                            <h:graphicImage value="/resources/images/add.png"/>
+                        </h:commandLink>
+                    </td>
+                </tr>
+            </table>
+            <h:dataTable value="#{cursoVagaBean.listaCursoVaga}" var="item" styleClass="tabela" headerClass="cabecalho">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Curso"/>
+                    </f:facet>
+                    <h:outputText value="#{item.curso.nome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Vaga"/>
+                    </f:facet>
+                    <h:outputText value="#{item.vaga.nome}"/>
+                </h:column>                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Alterar"/>
+                    </f:facet>
+                    <h:commandLink action="#{cursoVagaBean.preparaAlterarCursoVaga()}">
+                        <h:graphicImage value="/resources/images/edt.png" alt="Alterar" />
+                    </h:commandLink>    
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Excluir"/>
+                    </f:facet>
+                    <h:commandLink action="#{cursoVagaBean.excluirCursoVaga()}">
+                        <h:graphicImage value="/resources/images/del.png" alt="Alterar" />
+                    </h:commandLink>
+                </h:column>                 
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>

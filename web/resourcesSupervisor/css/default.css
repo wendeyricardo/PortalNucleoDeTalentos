@@ -1,0 +1,258 @@
+#top{
+    position: relative;
+    width: 920px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#top h1, p{
+    margin: 0;
+    padding: 0;
+}
+
+#top h1{
+    font-size: 52px;
+    color: #20A001;
+}
+
+#top p{
+    margin-top: -15px;
+    padding: 0px 0px 0px 4px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #86EA66;
+    text-transform: lowercase;
+}
+
+#page{
+    width: 920px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #CCCCCC;
+    position: relative;
+}
+
+#content{
+    width: 680px;
+    margin: 0;
+    color: #666666;
+    float: right;
+    padding: 10px;
+    float: right;
+}
+
+#left{
+    float: left;
+    background: #86EA66;
+    width: 200px;
+    color: #FFFFFF;
+    border-radius: 10px 0 0 10px;
+    border: 10px solid #FFFFFF;
+}
+
+#bottom{
+    position: relative;
+    width: 920px;
+    margin: 0 auto;
+    height: 50px;
+    text-align: center;
+    font-size: 11px;
+    font-family: arial, helvetica, sans-serif;
+    color: #86EA66;
+    margin-bottom: 27px;
+}
+
+#left ul{
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#left li{
+    margin: 0;
+    padding: 0;
+}
+
+#left li ul{
+    margin-bottom: 40px;
+    padding: 0 15px;
+}
+
+#left li ul li{
+    margin: 0;
+    padding: 0;
+    line-height: 35px;
+    border-bottom: 1px #A3F389 dashed;
+}
+
+#left h2{
+    width: 180px;
+    height: 32px;
+    padding-left: 10px;
+    background-color: #006400;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+#left a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#left a:hover{
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F6F6F6;
+    font-size: 14px;
+    text-align: justify;
+    font-family: arial, helvetica, sans-serif;
+}
+
+body input, textarea, select, option{
+    font-family: arial, helvetica, sans-serif;
+    color: #83826A;
+    font-size: 12px;
+}
+
+h1, h2, h3{
+    font-family: arial, helvetica, sans-serif;
+    font-weight: normal;
+    color: #666666;
+}
+
+h1 {
+    letter-spacing: -2px;
+    font-size: 3em;
+}
+
+p,ul{
+    line-height: 200%;
+}
+
+a{
+    color: #34BA01;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #34BA01;
+    text-decoration: underline;
+}
+
+.botao{
+    width: 200px;
+}
+
+fildset{
+    border-radius: 5px;
+}
+
+legend{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tabela{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    //box-shadow: 5px 5px 2px #888888;
+    border: 1px solid #3f7f00;
+}
+
+.tabela table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tabela td{
+    vertical-align: middle;
+    border: 1px solid #3f7f00;
+    border-width: 0px 1px 1px 0px;
+    text-align: center;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.tabela .cabecalho{
+    background-color: #3f7f00;
+    border: 0px solid #3f7f00;
+    text-align: center;
+    border-width: 0px 0px 1px 1px;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.titulo{
+    background-color: #3f7f00;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
+    vertical-align: central;
+}
+
+.titulo a{
+    font-size: 12px;
+    color: #34BA01;
+    text-decoration: none;
+    text-align: center;
+}
+
+.titulo a:hover{
+    font-size: 12px;
+    color: #34BA01;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#paginaLogin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -105px;
+    margin-top: -100px;
+    width: 210px;    
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #CCCCCC;
+    padding: 20px;    
+}
+
+#paginaLogin .botaoLogin{
+    font-size: 15px;
+    font-style: normal;
+    color: #FFFFFF;
+    border: 0px solid #FFFFFF;
+    width: 77px;
+    height: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 auto;    
+    background-color: #3f7f00;
+}
+
+#paginaLogin input{
+    height: 25px;
+    font-size: 15px;
+}
+
+#top #secao{
+    margin-top: -20px;
+    float: right;
+}

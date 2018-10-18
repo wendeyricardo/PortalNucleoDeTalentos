@@ -1,0 +1,70 @@
+<ui:composition xmlns ="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"                
+                template="./../../resources/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <table class="titulo">
+                <tr>
+                    <td width="95%">Vagas</td>
+                    <td width="5%">
+                        <h:commandLink action="#{vagaBean.prepararAdicionarVaga()}">
+                            <h:graphicImage value="/resources/images/add.png"/>
+                        </h:commandLink>
+                    </td>
+                </tr>
+            </table>
+            <h:dataTable value="#{vagaBean.listaVaga}" var="item" styleClass="tabela" headerClass="cabecalho">
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nome"/>
+                    </f:facet>
+                    <h:outputText value="#{item.nome}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="descricao"/>
+                    </f:facet>
+                    <h:outputText value="#{item.descricao}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="numero de vagas"/>
+                    </f:facet>
+                    <h:outputText value="#{item.numero_de_vagas}"/>
+                </h:column>                
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="carga horaria"/>
+                    </f:facet>
+                    <h:outputText value="#{item.carga_horaria}"/>
+                </h:column>  
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="beneficios"/>
+                    </f:facet>
+                    <h:outputText value="#{item.beneficios}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="horario"/>
+                    </f:facet>
+                    <h:outputText value="#{item.horario}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="cidade"/>
+                    </f:facet>
+                    <h:outputText value="#{item.cidade}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">
+                        <h:outputText value="data"/>
+                    </f:facet>
+                    <h:outputText value="#{item.data_de_vigencia}"/>
+                </h:column>          
+            </h:dataTable>
+        </h:form>
+    </ui:define>
+</ui:composition>
